@@ -9,12 +9,18 @@ jobs:
             -   name: Checkout Repo
                 uses: actions/checkout@v4
 
-            -   name: welcome message
-                run: echo "This is my first githb action"
-        
-            -   name: list
-                run: ls
+            -   name: List and Read files
+                run: |
+                    echo "This is my first githb action"
+                    ls -lrt
+                    cat README.md
 
-            -   name: Read file
-                run: cat README.md 
+            -   name: Generate ASCII Artwork
+                run: cowsay -f dragon "Run for cover, I am a Dragon" >> dragon.txt
+        
+#            -   name: list
+#                run: ls
+#
+#            -   name: Read file
+#                run: cat README.md 
 
